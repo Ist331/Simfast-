@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Timer</title>
+  </head>
+  <body>
+    <h1>Timer</h1>
+    <div id="timer">00:00:00</div>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="pauseTimer()">Pause</button>
+    <button onclick="resetTimer()">Reset</button>
+
+    <script>
+        var timerInterval;
+        var time = 0;
+        var isTimerRunning = false;
+  
+        function startTimer() {
+          if (!isTimerRunning) {
+            timerInterval = setInterval(incrementTimer, 1000);
+            isTimerRunning = true;
+          }
+        }
+  
+        function pauseTimer() {
+          clearInterval(timerInterval);
+          isTimerRunning = false;
+        }
+  
+        function resetTimer() {
+          clearInterval(timerInterval);
+          time = 0;
+          isTimerRunning = false;
+          updateTimerDisplay();
+        }
+  
+        function incrementTimer() {
+          time++;
+          updateTimerDisplay();
+        }
+  
+        function updateTimerDisplay() {
+          var hours = Math.floor(time / 3600);
+          var minutes = Math.floor((time % 3600) / 60);
+          var seconds = time % 60;
+  
+          var timerElement = document.getElementById("timer");
+          timerElement.textContent = formatTime(hours) + ":" + formatTime(minutes) + ":" + formatTime(seconds);
+        }
+  
+        function formatTime(time) {
+          return time.toString().padStart(2, "0");
+        }
+      </script>
+  </body>
+</html>

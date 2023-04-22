@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Air Traffic Control Radar</title>
+    <style>
+        #radar {
+            width: 600px;
+            height: 600px;
+            position: relative;
+            background-color: #000;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .aircraft {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-image: url('plane.png');
+            background-size: contain;
+            transform: rotate(-45deg);
+        }
+        .radar-beam {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 50%;
+            box-shadow: 0 0 50px #fff;
+            animation: radar-beam-animation 4s infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes radar-beam-animation {
+            from {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            to {
+                transform: scale(2.2);
+                opacity: 0;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Air Traffic Control Radar</h1>
+    <div id="radar">
+        <div class="radar-beam"></div>
+    </div>
+
+    <script>
+        var planes = [
+            {
+                id: 1,
+                x: 100,
+                y: 500,
+                speed: 5,
+                heading: -45,
+                element: null
+            },
+            {
+                id: 2,
+                x: 500,
+                y: 100,
+                speed: 3,
+                heading: 135,
+                element: null
+            },
+            {
+                id: 3,
+                x: 300,
+                y: 300,
+                speed: 6,
+                heading: 90,
+                lement: null
+            }
+
+        ];
+
+        function createAircraftElement(plane) {
+        var element = document.createElement('div');
+        element.className = 'aircraft';
+        element.style.top = plane.y + 'px';
+        element.style.left = plane.x + 'px';
+        element.style.transform = 'rotate(' + (plane.heading + 45) + 'deg)';
+        plane.element = element;
+    document.getElementById('radar').appendChild(element);
+        }
+
+        function moveAircraft(plane) {
+            var dx = Math.cos(plane.heading * Math.PI / 180) * plane.speed;
+            var dy = Math.sin(plane.heading * Math.PI / 180) * plane.speed;
+            plane.x += dx;
+            plane.y -= dy;
+            if (plane.x < -30) {
+                plane.x = 630;
+            } else if (plane.x > 630) {
+                plane.x = -30;
+            }
+            if (plane.y < -30) {
+                plane.y = 630;
+            } else if (plane.y > 630) {
+                plane.y = -30;
+            }
+            plane.element.style.top = plane.y + 'px';
+            plane.element.style.left = plane.x + 'px';
+        }
+
+        planes.forEach(function(plane) {
+            createAircraftElement(plane);
+        });
+
+        setInterval(function() {
+            planes.forEach(function(plane) {
+                moveAircraft(plane);
+            });
+        }, 50);
+    </script>
+
+
+
+</body>
+</html>
