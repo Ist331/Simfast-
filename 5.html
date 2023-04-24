@@ -303,28 +303,42 @@ left: 920px;
 top: 611px;
 }
 
-/* Flight List */
-.FlightListContainer{
+/* Flight Strip */
+.FlightStripContainer{
     position: absolute;
-width: 448px;
-height: 305px;
+width: 480px;
+height: 80px;
 left: 1375px;
 top: 678px;
-background: url("yess.png");
+background: url("Strip-2.png");
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
 
-/* Flight Strip */
-.FlightStripContainer{
+/* Flight List */
+.FlightListContainer{
     position: absolute;
-width: 448px;
-height: 155px;
+width: 440px;
+height: 555px;
 left: 1375px;
-top: 1100px;
+top: 780px;
 
-background: url("strip.png");
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+background: url("Flightlist.png");
+border: 1px solid #000000;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 6px;
+}
+
+.flight{
+position: absolute;
+width: 60px;
+height: 25px;
+left: 1375px;
+top: 780px;
+
+background: #D9D9D9;
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* Keyboard Output  */
@@ -333,7 +347,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0p
 width: 448px;
 height: 155px;
 left: 1375px;
-top: 1300px;
+top: 1400px;
 
 background: #D9D9D9;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -347,7 +361,7 @@ height: 1170px;
 left: 205px;
 top: 670px;
 
-background: #D9D9D9;
+background: #000000;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 /*Keyboard*/
@@ -356,7 +370,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0p
 width: 448px;
 height: 155px;
 left: 1375px;
-top: 1550px;
+top: 1680px;
 
 background: #4d6016;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -678,7 +692,6 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0p
           <td><button onclick="addToInput('k')">K</button></td>
           <td><button onclick="addToInput('l')">L</button></td>
           <td><button onclick="addToInput(';')">;</button></td>
-
 
         </tr>
         <tr>
