@@ -77,155 +77,7 @@ div {
   background-color: #515e2d;
   padding: 20px;
 }
-#keyboardContainer button{
-	font-size: 10px;
-    min-height:35px;
-    min-width: 40px;
-	text-align: center;
-    font-weight: bolder;
-    position:relative;
-    box-sizing: none;
-    border-style: outset;
-    border-width: 3px;
 
-}
-#keyboardContainer button span{
-    position: relative;
-}
-
-#keyboardContainer button:focus{
-    outline: none;
-}
-#keyboardContainer button:active{
-    border-style: inset;
-}
-
-#keyboardContainer button:active span,
-#keyboardContainer button:active:after{
-    top:2px;
-    left:2px;
-}
-#seven:active:after,
-#eight:active:after,
-#nine:active:after{
-
-    bottom:2px;
-    /*left:2px;*/
-}
-
-#spaceBarRow{
-	display:flex;
-
-}
-#spaceBar{
-	flex-grow: 5;
-}
-.medButton{
-	flex-grow: .5;
-}
-#topRows{
-	display: grid;
-	grid-template-columns: repeat(10, 1fr);
-}
-#lowerKeyboard{
-	display: grid;
-  	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  	grid-template-rows: repeat(6,1fr);
-  	gap: 3px 1px;
-
-	flex-grow: 2;
-
-}
-
-.green{
-	background-color: rgb(254, 254, 254);
-	color:white;
-	text-align: center;
-}
-.yellow{
-	background-color: gold;
-	color:black;
-	text-align: center;
-}
-.red{
-	background-color: rgb(255, 179, 0);
-	color:black;
-	text-align: center;
-}
-
-#one:after {
-    content:"\02196";
-  display: block;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 100%;
-  height: 100%;
-}
-#two:after {
-    content:"\02191";
-  display: block;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 100%;
-  height: 100%;
-}
-#three:after {
-    content:"\02197";
-  display: block;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 100%;
-  height: 100%;
-}
-#four:after {
-    content:"\02190";
-  display: block;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 100%;
-  height: 100%;
-}
-#six:after {
-    content:"\02192";
-  display: block;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 100%;
-  height: 100%;
-}
-#seven:after {
-    content:"";
-  display: block;
-  position: absolute;
-  top: 60%;
-  right: 0px;
-  width: 100%;
-  height: 100%;
-}
-#eight:after {
-    content:"";
-  display: block;
-  position: absolute;
-  top: 60%;
-  right: 0px;
-  width: 100%;
-  height: 100%;
-}
-#nine:after {
-    /*content:"\02198";*/
-    content:'';
-  display: block;
-  position: absolute;
-  top: 60%;
-  right: 0px;
-  width: 100%;
-  height: 100%;
-}
 
 
 /* Run */
@@ -557,8 +409,8 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0p
     </div>
 
     <div class="FlightListContainer">
-        <p> 009  A DAL609  MD90 CYN.PHL<br>
-            020  A AAL2020 E190 CYN.PHL<br>
+        <p> 009 LND DAL609 PHL 00:13:19 MD90 A<br>
+            020 LND AAL200 PHL 00:14:52 E190 A<br>
             026  D SWA1126 B738 PHL.OOD<br>
             053  E N71453  BE20 RBV.VCN<br>
             056  D AAL456  A319 PHL.ACY<br>
@@ -692,6 +544,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0p
           <td><button onclick="addToInput('k')">K</button></td>
           <td><button onclick="addToInput('l')">L</button></td>
           <td><button onclick="addToInput(';')">;</button></td>
+
 
         </tr>
         <tr>
