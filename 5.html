@@ -210,7 +210,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0p
     position: absolute;
 width: 1150px;
 height: 1170px;
-left: 205px;
+left: 200px;
 top: 670px;
 
 background: #000000;
@@ -233,9 +233,10 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0p
             height: 1150px;
             position: relative;
             background-color: #000;
-            border: 1px solid #fff;
+            border: 1px solid #df8b25;
             border-radius: 50%;
             overflow: hidden;
+           
         }
         .aircraft {
             position: absolute;
@@ -429,6 +430,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0p
     <div class="ScopeContainer">
       <div id="radar">
         <div class="radar-beam"></div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3062.053362164112!2d-75.2463217!3d39.8730426!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c46660a9832f%3A0x3e2e15944637d3d8!2sPhiladelphia%20International%20Airport!5e0!3m2!1sen!2sus!4v1682364944688!5m2!1sen!2sus" width="2050" height="2050" style="border:8;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
       <script>
@@ -456,7 +458,22 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0p
               speed: 6,
               heading: 90,
               lement: null
-          }
+          },
+          {
+              id: 4,
+              x: 500,
+              y: 100,
+              speed: 3,
+              heading: 135,
+              element: null
+          },{
+              id:5 ,
+              x: 400,
+              y: 200,
+              speed: 3,
+              heading: 125,
+              element: null
+          },
 
       ];
 
@@ -586,3 +603,4 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0p
 
 </body>
 </html>
+
